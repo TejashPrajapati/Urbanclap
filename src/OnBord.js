@@ -12,12 +12,12 @@ const OnBord = () => {
    
     <StatusBar translucent  backgroundColor='rgba(0,0,0,0)'/>
       <ImageBackground
-        style={{flex: 1}}
+        style={{flex: 1, }}
         source={require('../assets/on.jpg')}>
           <View style={styles.details}>
-            <Text style={{color: COLORS.white, fontSize: 50, fontWeight:'bold'}}>The</Text>
-            <Text style={{color: COLORS.white, fontSize: 40, fontWeight:'bold',lineHeight: 40,}}>all-new</Text>
-            <Text style={{color: COLORS.white, fontSize: 20, lineHeight: 25, marginTop: 15, textShadowColor: 'red' }}>Welcome to the Urbanservices! Thanks for choosing us to be a part of your home</Text>
+            <Text style={{color: COLORS.primary, fontSize: 50, fontWeight:'bold'}}>The</Text>
+            <Text style={{color: COLORS.primary, fontSize: 40, fontWeight:'bold',lineHeight: 40,}}>all-new</Text>
+            <Text style={{color: COLORS.primary, fontSize: 20, lineHeight: 25, marginTop: 15, textShadowColor: 'red' }}>Welcome to the Urbanservices! Thanks for choosing us to be a part of your home</Text>
             <TouchableOpacity  
               activeOpacity={0.8}
             onPress={() => navigation.navigate('HomeScreen')}>

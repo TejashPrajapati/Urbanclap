@@ -15,7 +15,7 @@ const Menu = () => {
                 style={styles.iconStyle}
                      source={require("../../assets/menuicon/house.png")}
                  />
-                 <Text style={{color:COLORS.white, fontSize: 15, textAlign: 'center', marginTop: 10 ,fontWeight: 'bold'}}>Home</Text>
+                 <Text style={{color:COLORS.white, fontSize: 12, textAlign: 'center', marginTop: 10 ,fontWeight: 'bold'}}>Home</Text>
            </TouchableOpacity>
 
            <TouchableOpacity
@@ -25,7 +25,7 @@ const Menu = () => {
                 style={styles.iconStyle}
                      source={require("../../assets/menuicon/Booking.png")}
                  />
-                 <Text style={{color:COLORS.white, fontSize: 15, textAlign: 'center', marginTop: 10 ,fontWeight: 'bold',}}>Booking</Text>
+                 <Text style={{color:COLORS.white, fontSize: 12, textAlign: 'center', marginTop: 10 ,fontWeight: 'bold',}}>Booking</Text>
            </TouchableOpacity>
 
            <TouchableOpacity
@@ -35,7 +35,7 @@ const Menu = () => {
                 style={styles.iconStyle}
                      source={require("../../assets/menuicon/wishlist.png")}
                  />
-                 <Text style={{color:COLORS.white, fontSize: 15, textAlign: 'center', marginTop: 10,fontWeight: 'bold'}}>Wishlist</Text>
+                 <Text style={{color:COLORS.white, fontSize: 12, textAlign: 'center', marginTop: 10,fontWeight: 'bold'}}>Wishlist</Text>
            </TouchableOpacity>
 
            <TouchableOpacity
@@ -45,7 +45,7 @@ const Menu = () => {
                 style={styles.iconStyle}
                      source={require("../../assets/menuicon/user.png")}
                  />
-                 <Text style={{color:COLORS.white, fontSize: 15, textAlign: 'center', marginTop: 10, fontWeight: 'bold'}}>Profile</Text>
+                 <Text style={{color:COLORS.white, fontSize: 12, textAlign: 'center', marginTop: 10, fontWeight: 'bold'}}>Profile</Text>
            </TouchableOpacity>
         </View>
     );
@@ -57,18 +57,17 @@ const styles = StyleSheet.create({
     menuContainer:{
         flexDirection: "row",
         justifyContent: "space-between",
-        paddingBottom: 10,
-        padding: 15,
-        paddingTop: 10,
-        paddingHorizontal: 10,
+        padding: 5 ,
+        paddingHorizontal: 15,
     },
     textStyle:{
         textTransform: "uppercase",
         marginBottom: 50,
+        fontSize: 11,
     },
     iconStyle:{
         width: "100%",
-        height: 40,
+        height: 30,
         aspectRatio: 1,
     },
     buttonStyle: {

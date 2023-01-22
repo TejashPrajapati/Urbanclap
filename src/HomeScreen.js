@@ -115,7 +115,8 @@ const style = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: COLORS.primary,
     paddingTop: 10,
-    
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
     
   },
   headerTitle:{
