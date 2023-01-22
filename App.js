@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+import { setStatusBarHidden, StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Login from './src/screens/Login';
 import Welcome from './src/screens/Welcome';
@@ -20,7 +20,9 @@ import AllServices from './src/AllServices/AllServices';
 import BookingScreen from './src/BookingScreen';
 import ProfileScreen from './src/ProfileScreen';
 import WishlistScreen from './src/WishlistScreen';
+import SearchFilter from './src/components/SearchFilter';
 import SignOutScreen from './src/SignOutScreen';
+import COLORS from './src/consts/color';
 
 
 const Stack = createNativeStackNavigator();
@@ -38,10 +40,39 @@ const App = () =>{
         <Stack.Screen name='Maintenance' component={Maintenance}/>
         <Stack.Screen name='Spa' component={Spa}/>
         <Stack.Screen name='Massage' component={Massage}/>
+        <Stack.Screen name='SearchFilter' component={SearchFilter}/>
         <Stack.Screen name='AllServices' component={AllServices}/>
-        <Stack.Screen name='ProfileScreen' component={ProfileScreen}/>
-        <Stack.Screen name='BookingScreen' component={BookingScreen}/>
-        <Stack.Screen name='WishlistScreen' component={WishlistScreen}/>
+        <Stack.Screen name='ProfileScreen' component={ProfileScreen}
+          options={{
+            headerShown: true,
+            headerTitleStyle:{
+              fontSize: 25
+            },
+            headerTitle: "Profile",
+            headerTitleAlign: 'center'
+          }}
+        />
+        <Stack.Screen name='BookingScreen' component={BookingScreen}
+          options={{
+            headerShown: true, 
+            headerTitleStyle:{
+              fontSize: 25
+            },
+            headerTitle: "Booking",
+            headerTitleAlign: 'center'
+          }}
+        />
+        <Stack.Screen name='WishlistScreen' component={WishlistScreen}
+          options={{
+            headerShown: true,
+            headerTitleStyle:{
+              fontSize: 25
+            },
+            headerTitle: "Wishlist",
+            headerTitleAlign: 'center'
+          }}
+         
+        />
         <Stack.Screen name='SignOutScreen' component={SignOutScreen}/>
       </Stack.Navigator>
     </NavigationContainer>

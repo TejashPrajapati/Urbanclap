@@ -1,16 +1,19 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
+
 const BookingScreen = () => {
+
+
   return (
     <View>
     <View>
+
       
     </View>
     <Text style={styles.mainHeader}>
     BookingScreen</Text>
-            <Text style={styles.description}>
-            BookingScreen</Text>
+          
             </View>
   )
 }

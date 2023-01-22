@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image, ImageBackground } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image, ImageBackground, FlatList } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import SearchFilter from './components/SearchFilter'
@@ -10,6 +10,9 @@ import { StatusBar } from 'expo-status-bar'
 import COLORS from './consts/color'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 import Menu from './screens/Menu'
+import offers from './screens/offers'
+
+
 
 
 
@@ -67,9 +70,10 @@ const HomeScreen = ({navigation}) => {
     )
   };
 
-  const Card = ({offer}) => {
-    return <ImageBackground></ImageBackground>
-  };
+  const Package = ({offers}) =>{
+    return <ImageBackground style={style.package} source={offers.image}></ImageBackground>
+  } 
+  
 
   return <SafeAreaView style={{flex: 1, backgroundColor: '#fff',}}>
           <StatusBar translucent={false} backgroundColor={COLORS.primary} />
@@ -86,14 +90,27 @@ const HomeScreen = ({navigation}) => {
               <View>
               <Text style={style.headerTitle}>Welcome To</Text>
                   <Text style={{fontStyle:'italic', color: COLORS.white, fontSize: 20, fontWeight: 'bold'}}>Urbanservices</Text>
+                  <TouchableOpacity >
                   <View style={style.inputContainer}>
-                    
-                    <TextInput placeholder='Search Services' style={{color: COLORS.grey}}/>
+                  <TextInput placeholder='Search Services' style={{color: COLORS.grey}} 
+                    onPressIn={() => navigation.navigate("SearchFilter")}
+                  />
                   </View>
+                  </TouchableOpacity>
               </View>
               </View>
               <ListServices />
+              <View>
               <Text style={style.secionTitle}>Special Package & Offers</Text>
+              <FlatList
+              contentContainerStyle={{paddingLeft: 15,paddingBottom: 10 }}
+              showsHorizontalScrollIndicator={false}
+              horizontal
+               data={offers} renderItem={({item}) => <Package offers={item} /> }/>
+              </View>
+              
+              
+              
           </ScrollView>
           <View style={style.bottom}>
           <Menu />
@@ -131,7 +148,7 @@ const style = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderRadius: 10,
     position: 'absolute',
-    top: 90,
+    top: 25,
     flexDirection: 'row',
     paddingHorizontal: 20,
     alignItems: 'center',
@@ -153,7 +170,17 @@ const style = StyleSheet.create({
     marginVertical: 20,
     fontWeight: 'bold',
     fontSize: 20,
-  }
+  },
+  package: {
+    width: 380,
+    height: 200,
+    marginRight: 20,
+    borderRadius:10,
+    overflow: "hidden",
+    padding: 10
+  },
+  
+  
 });
 
 export default HomeScreen;
