@@ -2,16 +2,25 @@ import { StyleSheet, TextInput, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import COLORS from "../consts/color";
 import { useNavigation } from "@react-navigation/native";
+import { ScrollView } from "react-native-gesture-handler";
 const PORT = 4000;
 
 const SearchFilter = () => {
   const navigation = useNavigation();
   const [data, setData] = useState([]);
-  const [filteredData, setfilteredData] = useState([]);
+  const [filteredData, setfilteredData] = useState([])
+    
+
+
 
 
   useEffect(() => {
-    fetchData("https://localhost:4000/api/womansalon");
+    fetchData("http://192.168.29.176:4000/api/sliders",{
+      method:"GET",
+      headers:{
+        'Content-Type': 'application/json'
+      },
+    });
   }, []);
 
   useEffect(() => {
@@ -39,6 +48,7 @@ const SearchFilter = () => {
           placeholder="Search Services"
           style={{ color: COLORS.grey }}
         />
+      
       </View>
     </View>
   );
