@@ -10,7 +10,7 @@ const OnBord = () => {
   return (
     <View style={{ flex: 1 }}>
    
-    <StatusBar translucent  />
+    <StatusBar translucent   />
       <ImageBackground
         style={{flex: 1, }}
         source={require('../assets/on.jpg')}>
