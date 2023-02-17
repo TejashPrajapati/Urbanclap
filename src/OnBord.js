@@ -13,7 +13,7 @@ const OnBord = () => {
     <StatusBar translucent   />
       <ImageBackground
         style={{flex: 1, }}
-        source={require('../assets/on.jpg')}>
+        source={require('../assets/on.jpg')}   blurRadius={5}>
           <View style={styles.details}>
             <Text style={{color: COLORS.primary, fontSize: 50, fontWeight:'bold'}}>The</Text>
             <Text style={{color: COLORS.primary, fontSize: 40, fontWeight:'bold',lineHeight: 40,}}>all-new</Text>
