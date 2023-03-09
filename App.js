@@ -19,6 +19,7 @@ import Massage from './src/AllServices/Massage/Massage';
 import AllServices from './src/AllServices/AllServices';
 import BookingScreen from './src/BookingScreen';
 import ProfileScreen from './src/ProfileScreen';
+import Editprofile from './src/screens/Editprofile';
 import WishlistScreen from './src/WishlistScreen';
 import SearchFilter from './src/components/SearchFilter';
 import SignOutScreen from './src/SignOutScreen';
@@ -42,6 +43,11 @@ const App = () =>{
         <Stack.Screen name='Massage' component={Massage}/>
         <Stack.Screen name='SearchFilter' component={SearchFilter}/>
         <Stack.Screen name='AllServices' component={AllServices}/>
+        <Stack.Screen name='Editprofile' component={Editprofile}
+          options={{
+            headerShown: true,
+          }}
+        />
         <Stack.Screen name='ProfileScreen' component={ProfileScreen}
           options={{
             headerShown: true,
@@ -49,8 +55,10 @@ const App = () =>{
               fontSize: 25
             },
             headerTitle: "Profile",
-            headerTitleAlign: 'center'
+            headerTitleAlign: 'center',
+            
           }}
+          
         />
         <Stack.Screen name='BookingScreen' component={BookingScreen}
           options={{
